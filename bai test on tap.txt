@@ -1,0 +1,20 @@
+
+1 - Thiết kế csdl gồm 02 bảng
+	- tbl_category bao gồm các trường(cat_id,cat_name,status,date_create)
+	- tbl_product bao gồm các trường(pro_id,cat_id, pro_name,price,status,date_create)
+2 - viết chức năng thêm sửa xóa hiển thị danh sách bảng danh mục sử dụng python(CRUD)
+3 - Viết chức năng thêm sửa xóa hiển thị danh sách bảng sản phẩm (CRUD)
+ 
+ ------QUẢN LÝ------
+ 1 - them danh mục
+ 2 - danh sách danh mục
+ 3 - sửa danh muc
+ 4 - xóa danh mục
+ 
+ 5  - Thêm Sản phẩm
+ 6 - Danh Sách sản phẩm
+ 7 - sửa thông tin sản phẩm
+ 8 - Xóa sản phẩm
+ 
+ mời bạn chọn chức năng : 2
+ 
