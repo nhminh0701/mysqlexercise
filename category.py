@@ -109,14 +109,16 @@ def is_table_empty(conn):
 def get_cat_id(conn):
     while True:
         cat_id = get_cat_id_input()
-        query_sql = f"SELECT * FROM tbl_category WHERE cat_id = {cat_id}"
-        cursor = execute_sql(query_sql, conn)
-        if cursor.rowcount != 0:
-            print_table(cursor._rows)
+        if is_cat_with_id_existed(conn, cat_id):
             return cat_id
         else:
             print("No item with such id existed!")
 
+def is_cat_with_id_existed(conn, cat_id):
+    query_sql = f"SELECT * FROM tbl_category WHERE cat_id = {cat_id}"
+    cursor = execute_sql(query_sql, conn)
+    print_table(cursor._rows)
+    return cursor.rowcount != 0
 
 def get_cat_id_input():
     while True:
